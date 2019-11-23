@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+
+  # comment:  work in progress
+  # db:         
+  #   #image: postgres  
+  #   image: postgres:latest
+  #   restart: unless-stopped
+  #   expose:
+  #     - "5432"
+  #   environment:   # will be used by the init script
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: postgres
+  #     POSTGRES_DB: postgres
+  #   volumes:
+  #     - ./postgres/pgdata:/var/lib/postgresql/data/  # persist container's db data to local pgdata/ (mounted)
+
+  # web:
+  #   build: ./helloworld
+  #   volumes:
+  #     - .:/code
+  #   expose:
+  #     - "8000"
+  #   depends_on:
+  #     - db
+
+  nginx:
+    build: ./helloworld
+    restart: always
+    image:  nginx:latest
+    ports:
+      - "8080:80"  # host:container 
+    # links:
+    #   - web
