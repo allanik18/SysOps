@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#Should be plased into .git/hooks/
+
+cd /opt/repo-dev/SysOps/
+docker-compose build
+docker-compose up -d

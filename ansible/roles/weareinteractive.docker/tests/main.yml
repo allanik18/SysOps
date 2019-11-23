@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  become: yes
+  roles:
+    - weareinteractive.docker
+  vars:
+    docker_options:
+      - "--bip=10.0.3.1/24"
+    docker_pip_dependencies:
+      - name: docker-py
+        version: 1.9.0
