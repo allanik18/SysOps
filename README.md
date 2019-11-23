@@ -1,5 +1,5 @@
-h1 SysOps Assignment
+SysOps Assignment
 ========================
-
-h2 Technical Test
+Technical Test
 -------------------------
+Implement deployment of 3 tier application, which would run on Ubuntu server 18.04 LTS, would use Nginx, Postgres and Python code in consitent and repeatable way
