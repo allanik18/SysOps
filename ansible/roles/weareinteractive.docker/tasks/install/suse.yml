@@ -1,6 +1,0 @@
----
-
-- name: Installing dependencies
-  zypper:
-    name: ca-certificates
-    state: present
