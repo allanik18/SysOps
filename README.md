@@ -22,6 +22,8 @@ Requirements
 - Install docker
 - Install docker-compose
 - Setting up Push-to-Deploy with Git
+- Run  setupCI.sh on VM 
+  
 
 Related articles
 ------------------
