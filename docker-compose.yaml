@@ -2,18 +2,18 @@ version: '3'
 
 services:
 
-  # db:
-  #   #image: postgres
-  #   build: ./postgres
-  #   restart: unless-stopped
-  #   expose:
-  #     - "5432"
-  #   environment:   # will be used by the init script
-  #     POSTGRES_USER: postgres
-  #     POSTGRES_PASSWORD: postgres
-  #     POSTGRES_DB: postgres
-  #   volumes:
-  #     - ./postgres/pgdata:/var/lib/postgresql/data/  # persist container's db data to local pgdata/ (mounted)
+  db:
+    #image: postgres
+    build: ./postgres
+    restart: unless-stopped
+    expose:
+      - "5432"
+    environment:   # will be used by the init script
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - ./postgres/pgdata:/var/lib/postgresql/data/  # persist container's db data to local pgdata/ (mounted)
 
   # web:
   #   build: .
